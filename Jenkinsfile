@@ -28,9 +28,9 @@ pipeline{
     stage('build image'){
       steps{
         script{
-          buildImage()
+          buildImage 'nanaot/java-app:6.6'
           dockerLogin()
-          pushImage()
+          pushImage 'nanaot/java-app:6.6'
         }
       }
     }
